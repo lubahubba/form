@@ -1,0 +1,33 @@
+.name {
+    font-size: 20px;
+    letter-spacing: 0px;
+    color: #b3b3b3;
+    font-weight: 700;
+}
+
+.forma {
+    max-width: 330px;
+    box-sizing: border-box;
+}
+
+.style-in,
+.submit {
+    margin: 10px 0;
+    padding: 10px 0;
+    width: 100%;
+    border-radius: 3px;
+    background-color: #fff;
+}
+
+.style-in {
+    border: 1px solid #ccc;
+}
+
+.submit {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    background-color: #12d661;
+    border: none;
+}

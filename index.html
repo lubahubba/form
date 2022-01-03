@@ -10,18 +10,127 @@
 </head>
 
 <body>
-    <header>
-        <p class="name">01. проста форма</p>
-        <div class="forma style">
-            <form action="">
-                <input type="text" class="login style-in">
-                <input type="text" class="emeil style-in"><br>
-                <select name="" class="city style-in"></select><br>
-                <textarea name="" class="text style-in"></textarea><br>
-                <input type="submit" value="Зареєструватися" class="submit">
-            </form>
-        </div>
-    </header>
+    <div class="wrapper">
+        <h1>Форми</h1>
+        <form class="simple-form">
+            <h2>01. проста форма</h2>
+            <p>
+                <label>
+                    <input class="style-in" type="text" name="name" placeholder="Введіть ім'я">
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input class="style-in" type="email" name="email" placeholder="Email">
+                </label>
+            </p>
+            <p>
+                <label>
+                    <select class="style-in" name="city">
+                        <option value="none">Ваше місто</option>
+                        <option value="Хмельницький">Хмельницький</option>
+                        <option value="Львів">Львів</option>
+                        <option value="Київ">Київ</option>
+                        <option value="Тернопіль">Тернопіль</option>
+                    </select>
+                </label>
+            </p>
+            <p>
+                <textarea class="style-in" name="email" rows="6" maxlength="30" placeholder="Email"
+                    style="margin-top: 0px; margin-bottom: 0px; height: 159px;"></textarea>
+            </p>
+            <p>
+                <input class="style-in" type="submit" value="Зареєструватися">
+            </p>
+        </form>
+        <form>
+            <h2>02. елементи</h2>
+            <div class="element-form style">
+                <div>
+                    <p>
+                        <input id="post" class="deli" type="radio" name="post" value="Нова Пошта">
+                        <label for="post">Нова Пошта</label>
+                    </p>
+                    <p>
+                        <input id="courier" class="deli" type="radio" name="courier" value="Кур’єр">
+                        <label for="courier">Кур’єр</label>
+                    </p>
+                    <p>
+                        <input id="deli" class="deli" type="radio" value="Самовивіз" disabled>
+                        <label for="deli">Самовивіз</label>
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <input id="read" class="check" type="checkbox" name="read" value="умова">
+                        <label for="read">Прочитав умови договору</label>
+                    </p>
+                    <p>
+                        <input id="agree" class="check" type="checkbox" name="agree" value="згідний">
+                        <label for="agree">Згідний з ПДВ 9%</label>
+                    </p>
+                    <p>
+                        <input id="getnews" class="check" type="checkbox" value="отримати новини" disabled>
+                        <label for="getnews">Отримувати новини на ел. пошту</label>
+                    </p>
+                </div>
+                <div>
+                    <fieldset>
+                        <div class="element-form">
+                            <p>Статус</p>
+                            <p>
+                                <input id="news" class="check" type="checkbox" name="news" value="новини">
+                                <label for="news">Новинки</label>
+                            </p>
+                            <p>
+                                <input id="akcii" class="check" type="checkbox" name="akcii" value="акції">
+                                <label for="akcii">Акційні товари</label>
+                            </p>
+                            <p>
+                                <input id="sale" class="check" type="checkbox" name="sale" value="акціїї">
+                                <label for="sale">Розпродаж</label>
+                            </p>
+                        </div>
+                        <div class="date">
+                            <p>Дата</p>
+                            <p>
+                                <input type="date" value="2018-03-17" name="calendar">
+                            </p>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </form>
+        <form>
+            <h2>03. стилізовані чекбокси </h2>
+            <div class="style-checkbox style">
+                <div class="style-checkbox-people">
+                    <p>
+                        <input id="man" class="man" type="checkbox" name="man" value="Чоловік">
+                        <label for="man">Чоловік</label>
+                    </p>
+                    <p>
+                        <input id="women" class="women" type="checkbox" name="women" value="Жінка">
+                        <label for="women">Жінка</label>
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <input id="newnews" type="checkbox" name="new-news" value="Отримувати новини">
+                        <label for="newnews">Отримувати новини</label>
+                    </p>
+                    <p>
+                        <input id="by" type="checkbox" name="by" value="Купити ковбаси">
+                        <label for="by">Купити додому ковбаси</label>
+                    </p>
+                    <p>
+                        <input id="onlight" type="checkbox" name="on-light" value="Включити світло">
+                        <label for="onlight">Включити світло</label>
+                    </p>
+                </div>
+            </div>
+        </form>
+    </div>
 </body>
 
 </html>

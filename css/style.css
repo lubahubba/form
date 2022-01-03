@@ -1,33 +1,243 @@
-.name {
+.body {
+    margin: 0;
+    font-family: serif;
+    font-family: "Roboto Slab";
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 990px;
+}
+
+h1 {
+    margin: 50px 0 0;
+    color: #1f222c;
+    font: 700 3rem "Roboto Slab";
+    text-align: center;
+}
+
+form {
+    padding: 50px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+h2 {
     font-size: 20px;
     letter-spacing: 0px;
     color: #b3b3b3;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
-.forma {
-    max-width: 330px;
+.simple-form label {
+    font-size: 14px;
+    color: #b3b3b3;
+    font-weight: 400;
+}
+
+input,
+textarea,
+select {
     box-sizing: border-box;
 }
 
-.style-in,
-.submit {
-    margin: 10px 0;
-    padding: 10px 0;
-    width: 100%;
-    border-radius: 3px;
-    background-color: #fff;
+label,
+input,
+textarea,
+select {
+    font-size: 14px;
+    color: #b3b3b3;
+    font-weight: 400;
+    font-family: "Roboto";
 }
 
 .style-in {
+    padding: 13px 15px;
+    width: 100%;
     border: 1px solid #ccc;
+    border-radius: 3px;
 }
 
-.submit {
+form p {
+    max-width: 330px;
+}
+
+textarea {
+    vertical-align: bottom;
+    resize: vertical;
+    min-height: 130px;
+    max-height: 400px;
+}
+
+[type="submit"] {
+    max-width: 330px;
     font-size: 14px;
-    color: #ffffff;
+    color: #fff;
     font-weight: 700;
     text-align: center;
     background-color: #12d661;
     border: none;
+}
+
+.element-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.element-form p {
+    margin: 0;
+    padding: 0 10px 15px;
+}
+
+.element-form label {
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
+}
+
+.deli,
+.check {
+    display: none;
+    visibility: hidden;
+}
+
+.deli+label,
+.check+label {
+    position: relative;
+    padding: 0 30px;
+    color: #1f222c;
+    border: 1px solid #ccc;
+    border: none;
+}
+
+.deli+label::before,
+.deli+label::after,
+.check+label::before,
+.check+label::after {
+    content: "";
+    position: absolute;
+}
+
+.deli+label::before {
+    left: 1px;
+    width: 15px;
+    height: 15px;
+    border-radius: 7px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.deli:checked+label::before,
+.check:checked+label::before {
+    border: 1px solid #3e6aff;
+}
+
+.deli:checked+label::after {
+    left: 6px;
+    top: 3px;
+    width: 7px;
+    height: 7px;
+    border-radius: 4px;
+    background-color: #3e6aff;
+}
+
+input:disabled+label {
+    color: #b3b3b3;
+}
+
+.deli:disabled+label:before,
+.check:disabled+label:before {
+    background-color: #f7f7f7;
+    border-color: #e5e5e5;
+}
+
+.check+label::before {
+    left: 1px;
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+}
+
+.check:checked+label::before {
+    border: 1px solid #3e6aff;
+}
+
+.check:checked+label::after {
+    left: 4px;
+    top: 2px;
+    width: 11px;
+    height: 5px;
+    border-left: 2px solid #244dd7;
+    border-bottom: 2px solid #244dd7;
+    transform: rotate(-45deg);
+}
+
+fieldset {
+    padding: 15px;
+    border-radius: 3px;
+    background-color: #f7f7f7;
+    border: 1px solid #e5e5e5;
+}
+
+fieldset p {
+    margin: 0;
+    font-size: 14px;
+    color: #b3b3b3;
+    font-weight: 700;
+}
+
+.date {
+    display: flex;
+    align-items: center;
+}
+
+.date>p {
+    padding: 10px 25px 5px 10px;
+}
+
+[type="date"] {
+    position: relative;
+    padding: 10px 30px 10px 10px;
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    background: #fff url(..//img/calendar.png) no-repeat right 13px top 8px;
+}
+
+[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: transparent;
+    background: transparent;
+}
+
+.style-checkbox {
+    display: flex;
+    justify-content: start;
+}
+
+.style-checkbox-people {
+    width: 50%;
+}
+
+.style-checkbox-people label {
+    font-size: 16px;
+    color: #1f222c;
+    font-weight: 700;
+}
+
+.man,
+.women {
+    position: absolute;
+    appearance: none;
+}
+
+.man+label {
+    position: relative;
 }

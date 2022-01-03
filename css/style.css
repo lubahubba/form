@@ -123,7 +123,7 @@ textarea {
     left: 1px;
     width: 15px;
     height: 15px;
-    border-radius: 7px;
+    border-radius: 50%;
     background-color: #fff;
     border: 1px solid #ccc;
 }
@@ -135,7 +135,7 @@ textarea {
 
 .deli:checked+label::after {
     left: 6px;
-    top: 3px;
+    top: 3.5px;
     width: 7px;
     height: 7px;
     border-radius: 4px;
@@ -154,6 +154,7 @@ input:disabled+label {
 
 .check+label::before {
     left: 1px;
+    top: 1px;
     width: 16px;
     height: 16px;
     border-radius: 3px;
@@ -167,7 +168,7 @@ input:disabled+label {
 
 .check:checked+label::after {
     left: 4px;
-    top: 2px;
+    top: 4px;
     width: 11px;
     height: 5px;
     border-left: 2px solid #244dd7;
@@ -234,10 +235,31 @@ fieldset p {
 
 .man,
 .women {
-    position: absolute;
-    appearance: none;
+    display: none;
+    visibility: hidden;
 }
 
 .man+label {
     position: relative;
+    padding: 30px 90px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: url(..//img/man.png) no-repeat #e8e8e8 left 13px top 8px;
+}
+
+.man:checked+label::before {
+    content: "";
+    position: absolute;
+}
+
+.man+label::before {
+    left: 1px;
+    top: 2px;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    background-color: #e8e8e8;
+    border: 2px solid #3e6aff;
+    background: url(..//img/man_color.png) no-repeat #e8e8e8 left 13px top 8px;
 }

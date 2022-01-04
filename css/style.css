@@ -227,6 +227,11 @@ fieldset p {
     width: 50%;
 }
 
+.style-checkbox-people p {
+    padding: 35px 0;
+    margin: 0;
+}
+
 .style-checkbox-people label {
     font-size: 16px;
     color: #1f222c;
@@ -241,25 +246,103 @@ fieldset p {
 
 .man+label {
     position: relative;
-    padding: 30px 90px;
+    padding: 27px 90px;
     width: 70px;
     height: 70px;
-    border-radius: 50%;
-    background: url(..//img/man.png) no-repeat #e8e8e8 left 13px top 8px;
+    background: url(..//img/man.png) no-repeat;
 }
 
-.man:checked+label::before {
+.man:checked+label,
+.women:checked+label {
+    color: #3e6aff;
+}
+
+.man:checked+label::before,
+.women:checked+label::before {
     content: "";
     position: absolute;
 }
 
-.man+label::before {
-    left: 1px;
-    top: 2px;
+.man:checked+label::before {
+    left: 0.25px;
+    top: 0.25px;
     width: 70px;
     height: 70px;
-    border-radius: 35px;
-    background-color: #e8e8e8;
-    border: 2px solid #3e6aff;
-    background: url(..//img/man_color.png) no-repeat #e8e8e8 left 13px top 8px;
+    background: url(..//img/man_color.png) no-repeat;
 }
+
+.women+label {
+    position: relative;
+    padding: 27px 90px;
+    width: 70px;
+    height: 70px;
+    background: url(..//img/women.png) no-repeat;
+}
+
+.women:checked+label::before {
+    left: 0.25px;
+    top: 0.25px;
+    width: 70px;
+    height: 70px;
+    background: url(..//img/women_color.png) no-repeat;
+}
+
+.checkbox {
+    visibility: hidden;
+    position: absolute;
+}
+
+.checkbox-checked p{
+    padding: 10px 0;
+}
+
+.checkbox+label {
+    position: relative;
+    padding: 20px 60px;
+    color: #1f222c;
+}
+
+.checkbox:checked+label {
+    color: #1f1f56;
+}
+
+.checkbox+label::before,
+.checkbox+label::after {
+    content: "";
+    position: absolute;
+}
+
+.checkbox+label::before {
+    left: 2px;
+    top: 15px;
+    width: 45px;
+    height: 25px;
+    border-radius: 12px;
+    background-color: #cfcfd1;
+
+}
+
+.checkbox:checked+label::before {
+    background-color: #3e6aff;
+}
+
+.checkbox:checked+label::after {
+    left: 24px;
+    top: 17px;
+    width: 21px;
+    height: 21px;
+    border-radius: 11px;
+    filter: drop-shadow(0 0 2.5px rgba(0, 0, 0, 0.5));
+    background-color: #fff;
+}
+
+.checkbox+label::after {
+    left: 4px;
+    top: 17px;
+    width: 21px;
+    height: 21px;
+    border-radius: 11px;
+    filter: drop-shadow(0 0 2.5px rgba(0, 0, 0, 0.5));
+    background-color: #fff;
+}
+

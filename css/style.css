@@ -1,3 +1,40 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-Bold.eot');
+    src: url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Roboto-Bold.woff2') format('woff2'),
+        url('../fonts/Roboto-Bold.woff') format('woff'),
+        url('../fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-Bold.eot');
+    src: url('../fonts/RobotoSlab-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/RobotoSlab-Bold.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-Bold.woff') format('woff'),
+        url('../fonts/RobotoSlab-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.eot');
+    src: url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/Roboto-Regular.woff') format('woff'),
+        url('../fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 .body {
     margin: 0;
     font-family: serif;
@@ -46,16 +83,28 @@ input,
 textarea,
 select {
     font-size: 14px;
-    color: #b3b3b3;
+    color: #1f222c;
     font-weight: 400;
     font-family: "Roboto";
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #b3b3b3;
 }
 
 .style-in {
     padding: 13px 15px;
     width: 100%;
+    min-width: 340px;
     border: 1px solid #ccc;
     border-radius: 3px;
+    outline: none;
+}
+
+.style-in:focus{
+    border-color: #3e6aff;
+    box-shadow: 0 0 2.5px rgba(62,106,255,0.55);
 }
 
 form p {
@@ -64,7 +113,7 @@ form p {
 
 textarea {
     vertical-align: bottom;
-    resize: vertical;
+    resize: none;
     min-height: 130px;
     max-height: 400px;
 }
@@ -167,10 +216,10 @@ input:disabled+label {
 }
 
 .check:checked+label::after {
-    left: 4px;
+    left: 6px;
     top: 4px;
-    width: 11px;
-    height: 5px;
+    width: 7px;
+    height: 4px;
     border-left: 2px solid #244dd7;
     border-bottom: 2px solid #244dd7;
     transform: rotate(-45deg);
@@ -218,21 +267,21 @@ fieldset p {
     background: transparent;
 }
 
-.style-checkbox {
+.style-radio {
     display: flex;
     justify-content: start;
 }
 
-.style-checkbox-people {
+.style-radio-people {
     width: 50%;
 }
 
-.style-checkbox-people p {
+.style-radio-people p {
     padding: 35px 0;
     margin: 0;
 }
 
-.style-checkbox-people label {
+.style-radio-people label {
     font-size: 16px;
     color: #1f222c;
     font-weight: 700;
@@ -264,8 +313,8 @@ fieldset p {
 }
 
 .man:checked+label::before {
-    left: 0.25px;
-    top: 0.25px;
+    left: 0;
+    top: 0;
     width: 70px;
     height: 70px;
     background: url(..//img/man_color.png) no-repeat;
@@ -280,8 +329,8 @@ fieldset p {
 }
 
 .women:checked+label::before {
-    left: 0.25px;
-    top: 0.25px;
+    left: 0;
+    top: 0;
     width: 70px;
     height: 70px;
     background: url(..//img/women_color.png) no-repeat;
@@ -292,7 +341,7 @@ fieldset p {
     position: absolute;
 }
 
-.checkbox-checked p{
+.checkbox-checked p {
     padding: 10px 0;
 }
 
@@ -346,3 +395,30 @@ fieldset p {
     background-color: #fff;
 }
 
+td label {
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
+}
+
+td {
+    padding: 15px 50px 0 0;
+}
+
+td input {
+    padding: 10px;
+    width: 100%;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.filetabl {
+    display: none;
+    visibility: hidden;
+}
+
+.filetabl+label {
+    border-radius: 3px;
+    background-color: #3e6aff;
+}

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Forms</title>
 </head>
 
 <body>
@@ -36,8 +36,7 @@
                 </label>
             </p>
             <p>
-                <textarea class="style-in" name="email" rows="6" maxlength="30" placeholder="Email"
-                    style="margin-top: 0px; margin-bottom: 0px; height: 159px;"></textarea>
+                <textarea class="style-in" name="email" rows="6" maxlength="30" placeholder="Email"></textarea>
             </p>
             <p>
                 <input class="style-in" type="submit" value="Зареєструватися">
@@ -103,14 +102,14 @@
         </form>
         <form>
             <h2>03. стилізовані чекбокси </h2>
-            <div class="style-checkbox style">
-                <div class="style-checkbox-people">
+            <div class="style-radio style">
+                <div class="style-radio-people">
                     <p>
-                        <input id="man" class="man" type="checkbox" name="man" value="Чоловік">
+                        <input id="man" class="man" type="radio" name="people" value="Чоловік">
                         <label for="man">Чоловік</label>
                     </p>
                     <p>
-                        <input id="women" class="women" type="checkbox" name="women" value="Жінка">
+                        <input id="women" class="women" type="radio" name="people" value="Жінка">
                         <label for="women">Жінка</label>
                     </p>
                 </div>
@@ -129,6 +128,54 @@
                     </p>
                 </div>
             </div>
+        </form>
+        <form>
+            <h2>04. форма таблицею</h2>
+            <h3>Заповніть усі необхідні поля</h3>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><label for="nametabl">ФІО:</label></td>
+                        <td><input class="style-in" id="nametabl" type="text" name="nametabl" placeholder="Введіть ім’я"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="pin">Пароль:</label></td>
+                        <td><input class="style-in" id="pin" type="password" placeholder="Введіть не менше 6 символів"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="city">Місто:</label></td>
+                        <td>
+                            <select id="city" class="style-in" name="city">
+                                <option value="none">Ваше місто</option>
+                                <option value="Хмельницький">Хмельницький</option>
+                                <option value="Львів">Львів</option>
+                                <option value="Київ">Київ</option>
+                                <option value="Тернопіль">Тернопіль</option>
+                            </select>
+                    </tr>
+                    <tr>
+                        <td><label>Стать:</label></td>
+                        <td><input id="mantabl" type="radio" name="people" value="Чоловік">
+                            <label for="mantabl">Чоловік</label>
+                            <input id="womtabl" type="radio" name="people" value="Жінка">
+                            <label for="womtabl">Жінка</label></td>
+                    </tr>
+                    <tr>
+                        <td><label for="file">Фото:</label></td>
+                        <td><input id="file" class="filetabl" type="file" value="file"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="koment">Коментарій:</label></td>
+                        <td><textarea class="style-in" id="koment" class="style-in" name="Коментарій" rows="1" maxlength="1"
+                                placeholder="Введіть текст повідомлення"
+                                style="margin-top: 0px; margin-bottom: 0px; height: 5px;"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input class="style-in" type="submit" value="Зареєструватися"></td>
+                    </tr>
+                </tbody>
+            </table>
         </form>
     </div>
 </body>

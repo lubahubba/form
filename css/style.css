@@ -102,9 +102,9 @@ textarea::-webkit-input-placeholder {
     outline: none;
 }
 
-.style-in:focus{
+.style-in:focus {
     border-color: #3e6aff;
-    box-shadow: 0 0 2.5px rgba(62,106,255,0.55);
+    box-shadow: 0 0 2.5px rgba(62, 106, 255, 0.55);
 }
 
 form p {
@@ -170,6 +170,8 @@ textarea {
 
 .deli+label::before {
     left: 1px;
+    top: 50%;
+    transform: translateY(-50%);
     width: 15px;
     height: 15px;
     border-radius: 50%;
@@ -184,7 +186,8 @@ textarea {
 
 .deli:checked+label::after {
     left: 6px;
-    top: 3.5px;
+    top: 50%;
+    transform: translateY(-50%);
     width: 7px;
     height: 7px;
     border-radius: 4px;
@@ -405,13 +408,13 @@ td {
     padding: 15px 50px 0 0;
 }
 
-td input {
+td input:not(input[type=radio]) {
     padding: 10px;
     width: 100%;
     border-radius: 3px;
-    background-color: #fff;
     border: 1px solid #ccc;
 }
+
 
 .filetabl {
     display: none;
@@ -419,6 +422,29 @@ td input {
 }
 
 .filetabl+label {
+    padding: 14px 32px;
+    display: inline-block;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Roboto";
+    text-align: center;
     border-radius: 3px;
     background-color: #3e6aff;
+}
+
+.styleTabl2 thead {
+    padding: 50px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.styleTabl2 td {
+    position: relative;
+    padding-top: 20px;
+}
+
+.styleTabl2 label {
+    position: absolute;
+    top: 0;
+    left: 0;
 }

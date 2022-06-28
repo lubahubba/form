@@ -132,15 +132,17 @@
         <form>
             <h2>04. форма таблицею</h2>
             <h3>Заповніть усі необхідні поля</h3>
-            <table>
+            <table class="styleTabl">
                 <tbody>
                     <tr>
                         <td><label for="nametabl">ФІО:</label></td>
-                        <td><input class="style-in" id="nametabl" type="text" name="nametabl" placeholder="Введіть ім’я"></td>
+                        <td><input class="style-in" id="nametabl" type="text" name="nametabl"
+                                placeholder="Введіть ім’я"></td>
                     </tr>
                     <tr>
                         <td><label for="pin">Пароль:</label></td>
-                        <td><input class="style-in" id="pin" type="password" placeholder="Введіть не менше 6 символів"></td>
+                        <td><input class="style-in" id="pin" type="password" placeholder="Введіть не менше 6 символів">
+                        </td>
                     </tr>
                     <tr>
                         <td><label for="city">Місто:</label></td>
@@ -155,24 +157,67 @@
                     </tr>
                     <tr>
                         <td><label>Стать:</label></td>
-                        <td><input id="mantabl" type="radio" name="people" value="Чоловік">
+                        <td><input id="mantabl" class="deli" type="radio" name="people" value="Чоловік">
                             <label for="mantabl">Чоловік</label>
-                            <input id="womtabl" type="radio" name="people" value="Жінка">
+                            <input id="womtabl" class="deli" type="radio" name="people" value="Жінка">
                             <label for="womtabl">Жінка</label></td>
                     </tr>
                     <tr>
                         <td><label for="file">Фото:</label></td>
-                        <td><input id="file" class="filetabl" type="file" value="file"></td>
+                        <td><input id="file" class="filetabl" type="file" value="file">
+                            <label for="file">Виберіть файл</label></td>
                     </tr>
                     <tr>
                         <td><label for="koment">Коментарій:</label></td>
-                        <td><textarea class="style-in" id="koment" class="style-in" name="Коментарій" rows="1" maxlength="1"
-                                placeholder="Введіть текст повідомлення"
-                                style="margin-top: 0px; margin-bottom: 0px; height: 5px;"></textarea></td>
+                        <td><textarea class="style-in" id="koment" class="style-in" name="Коментарій" rows="1"
+                                maxlength="1" placeholder="Введіть текст повідомлення"></textarea></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td><input class="style-in" type="submit" value="Зареєструватися"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+        <form>
+            <h2>05. форма таблицею</h2>
+            <h3>Оформлення заявки</h3>
+            <table class="styleTabl2">
+                <thead>
+                    <tr>
+                        <td><input type="text" id="surname">
+                            <label for="surname">Прізвище та ім’я</label>
+                        </td>
+                        <td>
+                            <input type="email" id="elpost">
+                            <label for="elpost">Ел. пошта</label>
+                        </td>
+                        <td>
+                            <input type="text" id="tel">
+                            <label for="tel">Телефон</label>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><label> Країна
+                                <select class="style-in" name="country">
+                                    <option value="Індонезія">Індонезія</option>
+                                    <option value="Україна">Україна</option>
+                                    <option value="Норвегія">Норвегія</option>
+                                </select>
+                            </label></td>
+                        <td colspan="2"></td>
+                        <td><input type="text" name="adresa" id="adresa">
+                            <label for="adresa">Адреса</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="misto">
+                            <label for="misto">Місто</label></td>
+                        <td><input type="text" id="byd">
+                            <label for="byd">Будинок</label></td>
+                        <td><input type="text" id="poshtin">
+                            <label for="poshtin">Поштовий індекс</label></td>
                     </tr>
                 </tbody>
             </table>
